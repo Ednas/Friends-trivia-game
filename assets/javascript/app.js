@@ -59,6 +59,9 @@ var questions
 //- if answer correct - display correct screen - if wrong say wrong
 //probably is a loop
 
+ $('#question').html(question[0]);
+
+
 //Just to see if the questions load
 console.log (questions[0])
 //Timer for the game
