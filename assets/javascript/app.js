@@ -1,7 +1,6 @@
 //I think I need this function to start the game
-window.onload = function() {
+$(document).ready (function(){
 
-}
 
 //This keeps track of the scores
 var function scores() {
@@ -58,8 +57,8 @@ var questions
 //I need somthing here to keep the game going 
 //- if answer correct - display correct screen - if wrong say wrong
 //probably is a loop
-
- $('#question').html(question[0]);
+    $("#button").click(function(){
+        $("question").append(('questions[]'++)); //figure how to go through each question in array and display it
 
 
 //Just to see if the questions load
@@ -74,3 +73,4 @@ var function timer(argument) {
 var reset = {
 	$('resetbtn').clearInterval(counter);
 }
+});
