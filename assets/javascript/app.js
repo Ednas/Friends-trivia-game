@@ -2,6 +2,14 @@
 window.onload = function() {
 
 }
+
+//This keeps track of the scores
+var function scores() {
+	var correct = 0;
+	var incorrect = 0;
+	var unanswered = 0;
+}
+
 //Questions Array
 var questions 
 {
@@ -46,20 +54,20 @@ var questions
 	"answer" : ['Joey', 'Monica', 'Rachel', 'Pheobe'];
 }
 }
-//This keeps track of the scores
-var function scores() {
-	var correct = 0;
-	var incorrect = 0;
-	var unanswered = 0;
-}
+
+//I need somthing here to keep the game going 
+//- if answer correct - display correct screen - if wrong say wrong
+//probably is a loop
 
 //Just to see if the questions load
 console.log (questions[0])
 //Timer for the game
 var function timer(argument) {
-	
+	$('timer') = Math.floor(t/60);
+	var seconds = 30;
+
 }
 //Restarts the game
 var reset = {
-	$('resetbrn').clearInterval(counter);
+	$('resetbtn').clearInterval(counter);
 }
