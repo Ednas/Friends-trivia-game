@@ -1,5 +1,14 @@
-//Need html doc to house game 
+//Need html doc to house game --> index.html
+
+$(document).ready(function(){
+
+
 	//Text that says "Click to start the game"
+	$('.start').click(newGame);
+function newGame()
+{
+	alert("You will have 30 seconds for each question. \nYou can now begin the game");
+}
 	//Text that says "Friends Game..."
 	//Show clock with 00:00 initially
 	//Button that starts the game
@@ -55,3 +64,5 @@ var questions = [
 	answer : ['Central Coffee', 'Central Park', 'Central Perk', 'Central Tea']
 }
 ]
+
+});

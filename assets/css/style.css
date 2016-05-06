@@ -6,11 +6,15 @@ body {
 h1 {
 	font-size: 50px;
 	padding-top: 20px;
-	color: #4dff56;
+	color: #000;
 }
 
-.game {
+.start {
 	float: center;
 	width: 75%;
-	background: #000;
+	background: #551033;
 }
+p {
+	color: #FF92BB;
+}
+
