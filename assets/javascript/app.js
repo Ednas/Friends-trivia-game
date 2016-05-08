@@ -1,18 +1,23 @@
 //Need html doc to house game --> index.html
 
 $(document).ready(function(){
-
-
 	//Text that says "Click to start the game"
+
 	$('.start').click(newGame);
 function newGame()
 {
 	alert("You will have 30 seconds for each question. \nYou can now begin the game");
+	console.log(alert);
 }
-	//Text that says "Friends Game..."
+	//Text that says "Friends Game..." --> index.html
 	//Show clock with 00:00 initially
+	$(".timer").append("<b>Timer: 00:00</b>");
 	//Button that starts the game
 	// question appears
+	$(".question").each(function(index, questions){
+    return questions.show(complete);
+		return false;
+});
 	//need to show answers
 	//timer needs to start
 	// timer counts down from 30sec
