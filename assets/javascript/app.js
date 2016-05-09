@@ -3,6 +3,22 @@
 $(document).ready(function(){
 	//Text that says "Click to start the game"
 
+//Questions Array
+var questions = [
+{
+	q1 :"How many seasons are there of Friends?",
+	answer : ['10', '17', '4', '9']
+},
+{
+	q2 :"What acress played Rachel?",
+	answer : ['Jennifer Love Hewitt', 'Julia Roberts', 'Jennifer Aniston','George Tekei']
+},
+{
+	q3 : "What was the name of the coffee shop they used to go to?",
+	answer : ['Central Coffee', 'Central Park', 'Central Perk', 'Central Tea']
+}
+]
+
 	$('.start').click(newGame);
 function newGame()
 {
@@ -15,9 +31,15 @@ function newGame()
 	//Button that starts the game
 	// question appears
 	$(".question").each(function(index, questions){
-    return questions.show(complete);
-		return false;
-});
+		
+		 for (var i = questions.length - 1; i >= 0; i--) {
+			questions[i]
+		}
+
+		 $(".questions").show("complete");
+});   
+    
+
 	//need to show answers
 	//timer needs to start
 	// timer counts down from 30sec
@@ -54,20 +76,6 @@ function newGame()
 	var incorrect = 0;
 	var unanswered = 0;
 
-//Questions Array
-var questions = [
-{
-	q1 :"How many seasons are there of Friends?",
-	answer : ['10', '17', '4', '9']
-},
-{
-	q2 :"What acress played Rachel?",
-	answer : ['Jennifer Love Hewitt', 'Julia Roberts', 'Jennifer Aniston','George Tekei']
-},
-{
-	q3 : "What was the name of the coffee shop they used to go to?",
-	answer : ['Central Coffee', 'Central Park', 'Central Perk', 'Central Tea']
-}
-]
+
 
 });
