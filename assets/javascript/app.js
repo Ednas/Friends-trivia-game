@@ -32,9 +32,9 @@ function newGame()
 	// question appears
 	$(".question").each(function(index, questions){
 		
-		 for (var i = questions.length - 1; i >= 0; i--) {
-			questions[i]
-		}
+		 for (var i = 0; i < questions.length; i++) {
+		  	questions[i]
+		  }
 
 		 $(".questions").show("complete");
 });   
@@ -55,9 +55,16 @@ function newGame()
       	console.log('TIME UP');
      	game.timeUp();
     	}
-	}
+	},
 	//timer needs to start
 	// timer counts down from 30sec
+  loadQuestion: function(){
+    timer = setInterval(game.countdown, 1000);
+    panel.html('<h2>' + questions[this.currentQuestion].question + '</h2>' );
+    for (var i = 0; i<questions[this.currentQuestion].answers.length; i++){
+      panel.append('<button class="answer-button" id="button"' + 'data-name="' + questions[this.currentQuestion].answers[i] + '">' + questions[this.currentQuestion].answers[i]+ '</button>');
+    }
+
 	//If correct answer
 		//Get click event
 		//add 1 to correct counter
