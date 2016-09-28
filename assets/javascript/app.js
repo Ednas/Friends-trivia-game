@@ -41,6 +41,21 @@ function newGame()
     
 
 	//need to show answers
+
+	var game = {
+		questions:questions,
+		currentQuestion,
+		counter:countStartNumber,
+  		correct:0,
+  		incorrect:0,
+  		game.counter--;
+    	$('#counter-number').html(game.counter);
+
+    	if (game.counter === 0){
+      	console.log('TIME UP');
+     	game.timeUp();
+    	}
+	}
 	//timer needs to start
 	// timer counts down from 30sec
 	//If correct answer
