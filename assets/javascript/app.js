@@ -63,7 +63,21 @@ function newGame()
     panel.html('<h2>' + questions[this.currentQuestion].question + '</h2>' );
     for (var i = 0; i<questions[this.currentQuestion].answers.length; i++){
       panel.append('<button class="answer-button" id="button"' + 'data-name="' + questions[this.currentQuestion].answers[i] + '">' + questions[this.currentQuestion].answers[i]+ '</button>');
+    },
+  timeUp: function (){
+    clearInterval(timer);
+    $('#counter-number').html(game.counter);
+
+    panel.html('<h2>Out of Time!</h2>');
+    panel.append('<h3>The Correct Answer was: ' + questions[this.currentQuestion].correctAnswer);
+    panel.append('<img src="' + questions[this.currentQuestion].image + '" />');
+
+    if (game.currentQuestion === questions.length - 1){
+      setTimeout(game.results, 3 * 1000);
+    } else {
+      setTimeout(game.nextQuestion, 3 * 1000);
     }
+  }
 
 	//If correct answer
 		//Get click event
