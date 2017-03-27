@@ -16,3 +16,11 @@ p {
 	color: #FF92BB;
 }
 
+#quiz-area {
+	background: green;
+}
+
+.answer:hover p {
+	border: black 4px;
+	background: yellow;
+}

@@ -30,17 +30,20 @@ function newGame() {
   alert("You will have 30 seconds for each question. \n You can now begin the game");
   $(".timer").append("<b>Timer: 00:00</b>");
 
-
+  for (var i = 0; i < questions.length; i++) {
     // $('#answer-button').click()
      timer = setInterval(game.countdown, 1000);
-     let panel = document.getElementsByClassName('.question');
-     console.log(questions[0].q);
-     $(".question").html('<h2>' + questions[0].q + '</h2>' );
+     console.log(questions[i].q);
+     $(".question").html('<h2>' + questions[i].q + '</h2>' );
+     $(".answer").html('<p>' + questions[i].answer[0] + '</p>' + '<br>'
+     + '<p>' + questions[i].answer[1] + '</p>' + '<br>'
+     + '<p>' + questions[i].answer[2] + '</p>' + '<br>'
+     + '<p>' + questions[i].answer[3] + '</p>');
      // for (var i = 0; i<questions[this.q].answers.length; i++){
      //   panel.append('<button class="answer-button" id="button"' + 'data-name="' + questions[this.currentQuestion].answers[i] + '">' + questions[this.currentQuestion].answers[i]+ '</button>');
      // }
 
-  for (var i = 0; i < questions.length; i++) {
+
 console.log(questions[i].q);
 console.log(questions[i].answer);
 console.log(questions[i].correct);
@@ -151,6 +154,10 @@ var game = {
 
 function reset() {
   //TODO - Make a clear all divs 
+  $(".question").html("<div></div>");
+  $(".answer").html("<div></div>");
+  $(".score").html("<div></div>");
+  $(".timer").html("<div></div>");
   let correct = 0;
   let incorrect = 0;
   let unanswered = 0;
