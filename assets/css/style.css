@@ -18,9 +18,6 @@ p {
 
 #quiz-area {
 	background: green;
-}
-
-.answer:hover p {
-	border: black 4px;
-	background: yellow;
+	margin-right: 150px;
+	margin-left: 150px;
 }

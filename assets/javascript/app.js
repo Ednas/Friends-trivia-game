@@ -5,8 +5,6 @@ let unanswered = 0;
 let choice;
 let countStartNumber = 0;
 
-//Text that says "Click to start the game"
-
 //Questions Array
 var questions = [{
   q: "How many seasons are there of Friends?",
@@ -25,28 +23,30 @@ var questions = [{
   images: "assets/images/friends.jpg"
 }];
 
+//Starts the game
 function newGame() {
 
   alert("You will have 30 seconds for each question. \n You can now begin the game");
   $(".timer").append("<b>Timer: 00:00</b>");
 
   for (var i = 0; i < questions.length; i++) {
-    // $('#answer-button').click()
      timer = setInterval(game.countdown, 1000);
+     $(".timer").append(timer);
      console.log(questions[i].q);
      $(".question").html('<h2>' + questions[i].q + '</h2>' );
-     $(".answer").html('<p>' + questions[i].answer[0] + '</p>' + '<br>'
-     + '<p>' + questions[i].answer[1] + '</p>' + '<br>'
-     + '<p>' + questions[i].answer[2] + '</p>' + '<br>'
-     + '<p>' + questions[i].answer[3] + '</p>');
-     // for (var i = 0; i<questions[this.q].answers.length; i++){
-     //   panel.append('<button class="answer-button" id="button"' + 'data-name="' + questions[this.currentQuestion].answers[i] + '">' + questions[this.currentQuestion].answers[i]+ '</button>');
-     // }
+     $(".answer").html('<form><p><input type="radio" id="myRadio" value="'+questions[i].answer[0]+'">  ' + questions[i].answer[0] + '</p>'
+     + '<p><input type="radio" id="myRadio" value="'+questions[i].answer[1]+'">  ' + questions[i].answer[1] + '</p>'
+     + '<p><input type="radio" id="myRadio" value="'+questions[i].answer[2]+'">  ' + questions[i].answer[2] + '</p>'
+     + '<p><input type="radio" id="myRadio" value="'+questions[i].answer[3]+'">  ' + questions[i].answer[3] + '</p>');
+     var x = document.getElementById("myRadio").value;
+     document.getElementById("demo").innerHTML = x;
 
 
-console.log(questions[i].q);
-console.log(questions[i].answer);
-console.log(questions[i].correct);
+
+
+// console.log(questions[i].q);
+// console.log(questions[i].answer);
+// console.log(questions[i].correct);
       //If correct answer
       //Get click event
       //add 1 to correct counter
