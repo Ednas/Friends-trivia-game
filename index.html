@@ -13,22 +13,16 @@
 	<!--CSS file-->
 	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-
-
 </head>
 <header><h1>Friend's Trivia Game!</h1></header>
 <body>
-
-	<div>
+	<div id="quiz-area" class="well well-lg">
 		<button class="start btn btn-primary">Click to start</button>
-	</div>
-	<div id="quiz-area">
-		<div class="timer">Timer</div>
-		<div class="score"></div>
-		<div class="question"><img src="./assets/images/friends.jpg" width='400px'></div>
-		<div class="answer">Answer</div>
+			<div class="timer"></div>
+			<div class="question"><img src="./assets/images/friends.jpg" width='400px'></div>
+			<div class="answer"></div>
 		<button class="resetbtn btn btn-warning">Restart the Trivia Game!</button>	
+			<div class="score well well-lg"></div>
 	</div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

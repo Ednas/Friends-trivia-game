@@ -32,7 +32,7 @@ function timer(){
       $(".timer").html("<b>0 Seconds left</b>");
       alert("Time is up");
       unanswered++;
-      $(".score").html("<div>Correct: "+ correct + " | Incorrect: " + incorrect + " | Unanswered: " + unanswered +" </div>");
+      $(".score").html("<div><span class=scores well well-sm>Correct: <span class='badge'>"+ correct +"</span> | Incorrect: <span class='badge'>"+ correct +"</span> | Unanswered: <span class='badge'>" + unanswered + "</span> </span></div>");
       clearTimeout(tid);    
     } else {
       timeLeft--;
@@ -45,7 +45,7 @@ function timer(){
 
 //For each Question, reset the timer
 function nextQuestion(){
-  timeLeft = 30;
+  timeLeft = 5;
     timer();
 
   for (var i = 0; i < questions.length; i++) {

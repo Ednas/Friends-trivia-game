@@ -1,7 +1,6 @@
 body {
-	background-image: url("../images/friends.jpg");
-	background-size: cover;
 	text-align: center;
+	background: #8D6E63;
 }
 h1 {
 	font-size: 50px;
@@ -13,11 +12,22 @@ h1 {
 	float: center;
 }
 p {
-	color: #FF92BB;
+	color: #3E2723;
 }
 
 #quiz-area {
-	background: green;
+	background: #8BC34A;
 	margin-right: 150px;
 	margin-left: 150px;
+}
+.score {
+	background: #4FC3F7;
+	border: none;
+}
+.scores {
+	font-size: 1.5em;
+}
+.badge {
+	background: #AB47BC;
+	font-size: 0.9em;
 }
