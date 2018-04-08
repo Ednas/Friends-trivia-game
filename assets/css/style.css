@@ -36,3 +36,8 @@ p {
     background: #AB47BC;
     font-size: 0.9em;
 }
+.footer,
+.push {
+  height: 4em;
+  text-align: center;
+}
