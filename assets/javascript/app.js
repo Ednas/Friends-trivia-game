@@ -25,17 +25,27 @@ var questions = [{
     question: "How many seasons are there of Friends?",
     answers: ["Ten", "Seventeen", "Four", "Nine"],
     correctAnswer: "Ten",
-    images: "assets/images/friends.jpg"
+    image: "assets/images/ten.gif"
 }, {
     question: "What acress played Rachel?",
     answers: ['Jennifer Love Hewitt', 'Julia Roberts', 'Jennifer Aniston', 'George Tekei'],
     correctAnswer: "Jennifer Aniston",
-    images: "assets/images/friends.jpg"
+    image: "assets/images/jennifer.gif"
 }, {
     question: "What was the name of the coffee shop they used to go to?",
     answers: ['Central Coffee', 'Central Park', 'Central Perk', 'Central Tea'],
     correctAnswer: "Central Perk",
-    images: "assets/images/friends.jpg"
+    image: "assets/images/centralPerk.gif"
+}, {
+    question: "What is the name of Ross's monkey?",
+    answers: ['Steve', 'Marcel', 'Cebus', 'Ace'],
+    correctAnswer: "Marcel",
+    image: "assets/images/marcel.gif"
+}, {
+    question: "What Friend was famously overweight as a child?",
+    answers: ['Chandler', 'Monica', 'Ross', 'Phoebe'],
+    correctAnswer: "Monica",
+    image: "assets/images/monica.gif"
 }];
 
 var game = {
